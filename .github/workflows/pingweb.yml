@@ -12,4 +12,4 @@ jobs:
       - name: Ping Website
         run: |
           echo "Pinging website..."
-          curl -I https://securechat.online || exit 1
+          curl -I https://thriii.onrender.com || exit 1
