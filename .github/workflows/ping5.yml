@@ -1,1 +1,16 @@
 
+name: Ping Website Every Minute
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"   # Run every 1 minute
+  workflow_dispatch:        # Allow manual run from GitHub UI
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Website
+        run: |
+          echo "Pinging website..."
+          curl -I https://thriiievents.com || exit 1
